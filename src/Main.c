@@ -8,8 +8,6 @@
 #include "stm32f4xx.h"
 //#include "system_stm32f4xx.h"
 #include "AssemblyModule.h"
-#include "Led.h"
-#include "UserLed.h"
 
 #define SystemCoreClock  400000
 
@@ -20,7 +18,7 @@ extern uint16_t twoBytes;				// Import from AssemblyModule.s
 
 uint32_t variableInC = 0xdeaf;
 
-void wait(void) {
+void waitForever(void) {
 	volatile int counter = 500000;
 	while(counter--);
 }
@@ -29,18 +27,10 @@ int main() {
 	fourBytes = 0xdeadbeef;
 	noArgFunc();
 
-	initLED(LED3);
-	initLED(LED4);
-
 	initSysTick();
+  waitForever();
 
 	while(1) {
-		turnOnLED(LED3);
-//		GPIOG->ODR &= LED3;
-		wait();
-		turnOffLED(LED3);
-//		GPIOG->ODR &= ~LED3;
-		wait();
 	}
 
 	return 0;				// Verify that 'variableInC' now contains 0xB19FACE

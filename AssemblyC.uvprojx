@@ -155,7 +155,7 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
+            <InitializationFile>.\Cortex.ini</InitializationFile>
           </SimDlls>
           <TargetDlls>
             <CpuDll></CpuDll>
@@ -426,21 +426,6 @@
               <FileName>TCB.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\TCB.h</FilePath>
-            </File>
-            <File>
-              <FileName>Led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\Led.c</FilePath>
-            </File>
-            <File>
-              <FileName>Led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\Led.h</FilePath>
-            </File>
-            <File>
-              <FileName>UserLed.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\UserLed.h</FilePath>
             </File>
           </Files>
         </Group>
