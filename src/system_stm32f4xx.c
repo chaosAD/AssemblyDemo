@@ -160,6 +160,12 @@
   * @{
   */
 
+
+// The following line is needed because the startup assembly
+// code does not initialize SystemCoreClock variable. Please
+// remove it once the initialization code is included.
+//#define SystemCoreClock  400000
+
 /**
   * @brief  Configure and enable SysTick.
   * @note   Make sure SysTick_Handler is defined.

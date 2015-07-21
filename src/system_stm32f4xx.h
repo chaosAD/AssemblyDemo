@@ -58,6 +58,9 @@
 #define enableSysTickInterrupt()						                              \
                             (SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk)
 
+#define clearSysTickCountFlag()						                              \
+                            (SysTick->CTRL &= ~SysTick_CTRL_COUNTFLAG_Msk)
+
 /** @addtogroup STM32F4xx_System_Includes
   * @{
   */
